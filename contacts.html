@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandile Ngwenya - Contacts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bandile Ngwenya</h1>
+        <p>Website Developer & Aspiring Innovator</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="qna.html">Q&A</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <ul>
+                <li><strong>Phone:</strong> 0607491759</li>
+                <li><strong>Email:</strong> <a href="mailto:webdev@bandz.co.za">webdev@bandz.co.za</a></li>
+                <li><strong>Location:</strong> Johannesburg, South Africa</li>
+                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/bandile-ngwenya" target="_blank">linkedin.com/in/bandile-ngwenya</a> (example link)</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/bandile-ngwenya" target="_blank">github.com/bandile-ngwenya</a> (example link)</li>
+            </ul>
+            <p>
+                As a website developer, I am always open to new projects and collaborations. Whether you need a custom website, a consultation on web design, or support with front-end development, please don’t hesitate to reach out. I aim to respond promptly to all inquiries and look forward to discussing how I can assist with your digital needs.
+            </p>
+            <div class="contact-form">
+                <h3>Send Me a Query or Recommendation</h3>
+                <form action="mailto:webdev@bandz.co.za" method="post" enctype="text/plain">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="subject">Subject:</label><br>
+                    <input type="text" id="subject" name="subject" required><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" required></textarea><br>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Bandile Ngwenya. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dynamic Navigation Highlight
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add("active");
+                }
+            });
+
+            // Smooth Scroll for Navigation
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute("href");
+                    if (href.startsWith("#")) {
+                        document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+                    } else {
+                        window.location.href = href;
+                    }
+                });
+            });
+
+            // Back to Top Button
+            const backToTop = document.getElementById("backToTop");
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 100) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+            backToTop.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+</body>
+</html>
