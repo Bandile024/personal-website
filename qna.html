@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandile Ngwenya - Q&A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bandile Ngwenya</h1>
+        <p>Website Developer & Aspiring Innovator</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="qna.html">Q&A</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+                <li><strong>Q: What services do I offer as a website developer?</strong> <br> A: I specialize in creating custom websites using HTML, CSS, JavaScript, and frameworks like React. Services include responsive design, e-commerce solutions, and site optimization.</li>
+                <li><strong>Q: How can I hire you for a project?</strong> <br> A: Contact me via email at webdev@bandz.co.za or phone at 0607491759 to discuss your project requirements and timeline.</li>
+                <li><strong>Q: What tools do I use?</strong> <br> A: I utilize tools like Visual Studio Code, Git, Figma for design, and browser developer tools to ensure high-quality web development.</li>
+                <li><strong>Q: How long does it take to build a website?</strong> <br> A: The timeline varies based on complexity, but a standard site typically takes 2-4 weeks, with regular updates provided.</li>
+                <li><strong>Q: Do I offer maintenance services?</strong> <br> A: Yes, I provide ongoing maintenance and updates to ensure your website remains secure and up-to-date.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Bandile Ngwenya. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dynamic Navigation Highlight
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add("active");
+                }
+            });
+
+            // Smooth Scroll for Navigation
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute("href");
+                    if (href.startsWith("#")) {
+                        document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+                    } else {
+                        window.location.href = href;
+                    }
+                });
+            });
+
+            // Back to Top Button
+            const backToTop = document.getElementById("backToTop");
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 100) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+            backToTop.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+</body>
+</html>
