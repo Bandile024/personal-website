@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandile Ngwenya - Request Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bandile Ngwenya</h1>
+        <p>Website Developer & Aspiring Innovator</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="qna.html">Q&A</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h2>Request a Service</h2>
+            <p>
+                Thank you for considering my services! Please fill out the form below to provide details about your project or inquiry. I’ll review your request and get back to you promptly to discuss how I can assist with your web development needs.
+            </p>
+            <div class="contact-form">
+                <form action="mailto:webdev@bandz.co.za" method="post" enctype="text/plain">
+                    <label for="name">Full Name:*</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:*</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="phone">Phone Number (Optional):</label><br>
+                    <input type="tel" id="phone" name="phone"><br>
+                    <label for="service">Service Type:*</label><br>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="website-design">Website Design</option>
+                        <option value="website-development">Website Development</option>
+                        <option value="maintenance">Website Maintenance</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="other">Other</option>
+                    </select><br>
+                    <label for="details">Project Details:*</label><br>
+                    <textarea id="details" name="details" rows="5" placeholder="Describe your project or requirements..." required></textarea><br>
+                    <label for="budget">Budget Range (Optional):</label><br>
+                    <input type="text" id="budget" name="budget" placeholder=><br>
+                    <button type="submit">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Bandile Ngwenya. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dynamic Navigation Highlight
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add("active");
+                }
+            });
+
+            // Smooth Scroll for Navigation
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute("href");
+                    if (href.startsWith("#")) {
+                        document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+                    } else {
+                        window.location.href = href;
+                    }
+                });
+            });
+
+            // Back to Top Button
+            const backToTop = document.getElementById("backToTop");
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 100) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+            backToTop.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            // Form Validation
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function(e) {
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const service = document.getElementById("service").value;
+                const details = document.getElementById("details").value;
+
+                if (!name || !email || !service || !details) {
+                    e.preventDefault();
+                    alert("Please fill out all required fields.");
+                } else if (!email.includes("@")) {
+                    e.preventDefault();
+                    alert("Please enter a valid email address.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
