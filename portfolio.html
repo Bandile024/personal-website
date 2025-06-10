@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandile Ngwenya - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bandile Ngwenya</h1>
+        <p>Website Developer & Aspiring Innovator</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="qna.html">Q&A</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <p>
+                Welcome to my portfolio, where I showcase my journey as a website developer. Below are some of the projects I’ve worked on, reflecting my skills in HTML, CSS, JavaScript, and modern frameworks. Each project highlights my ability to create functional and aesthetically pleasing web solutions.
+            </p>
+            <ul class="project-list">
+                <li><a href="https://your-personal-website.com" target="_blank">Personal Website</a> - A responsive portfolio site showcasing my skills and projects, built with HTML, CSS, and a touch of JavaScript.</li>
+                <li><a href="https://ecommerce-demo.com" target="_blank">E-Commerce Demo</a> - A prototype online store featuring product listings and a cart system, developed using HTML, CSS, and Bootstrap.</li>
+                <li><a href="https://blog-template.com" target="_blank">Blog Template</a> - A clean and responsive blog layout with dynamic content, crafted with HTML, CSS, and basic JavaScript.</li>
+                <li><a href="https://landing-page.com" target="_blank">Landing Page</a> - A single-page marketing site designed to convert visitors, built with HTML, CSS, and animated effects.</li>
+                <li><a href="https://todo-app.com" target="_blank">To-Do App</a> - A simple task management tool with local storage, created using HTML, CSS, and JavaScript.</li>
+            </ul>
+            <p>
+                These projects demonstrate my commitment to delivering high-quality web development solutions. I continue to expand my portfolio with new challenges, so check back for updates. If you’re interested in collaborating or commissioning a project, please visit my <a href="contacts.html">Contacts</a> page.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Bandile Ngwenya. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dynamic Navigation Highlight
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add("active");
+                }
+            });
+
+            // Smooth Scroll for Navigation
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute("href");
+                    if (href.startsWith("#")) {
+                        document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+                    } else {
+                        window.location.href = href;
+                    }
+                });
+            });
+
+            // Back to Top Button
+            const backToTop = document.getElementById("backToTop");
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 100) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+            backToTop.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            // Project Counter
+            const projectList = document.querySelector(".project-list");
+            const projectCount = projectList.getElementsByTagName("li").length;
+            const countDiv = document.createElement("div");
+            countDiv.textContent = `Total Projects: ${projectCount}`;
+            countDiv.style.marginTop = "1rem";
+            countDiv.style.fontWeight = "bold";
+            projectList.parentNode.insertBefore(countDiv, projectList.nextSibling);
+        });
+    </script>
+</body>
+</html>
