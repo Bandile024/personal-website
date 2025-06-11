@@ -51,6 +51,21 @@ nav a:hover {
 }
 
 /* Home hero section styles */
+
+.home-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 2rem;
+}
+
 .hero-content {
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
     padding: 2rem;
