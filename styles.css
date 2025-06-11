@@ -64,6 +64,8 @@ nav a:hover {
     color: #fff;
     position: relative;
     padding: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .hero-content {
