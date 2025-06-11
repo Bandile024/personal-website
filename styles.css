@@ -217,7 +217,8 @@ nav a:hover {
     background-color: darkgrey;
     color: #ecf0f1;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 75px;
+    border-radius: 25px;
     width: 100%;
 }
 
