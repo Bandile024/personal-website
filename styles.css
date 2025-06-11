@@ -70,6 +70,7 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
     padding: 2rem;
     border-radius: 8px;
+    height: auto;
 }
 
 .home-hero h2 {
