@@ -53,9 +53,9 @@ nav a:hover {
 /* Home hero section styles */
 
 .home-hero {
-    background-size: cover;
+   /* background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     height: auto;
     display: flex;
     align-items: center;
