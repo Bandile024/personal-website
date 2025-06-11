@@ -96,6 +96,7 @@ nav a:hover {
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s;
+  position: center;
 }
 
 .request-button:hover {
