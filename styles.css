@@ -212,13 +212,14 @@ nav a:hover {
 }
 
 /* Footer styles */
-.footer-1{
+/*.footer-1{
     text-align: left;
     background-color: darkblue;
     position: relative;
     width: 100%;
-}
-.footer-2 {
+}*/
+
+footer-1, .footer-2 {
     text-align: center;
     padding: 1rem;
     background-color: #2c3e50;
