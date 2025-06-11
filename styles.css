@@ -56,7 +56,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 400px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,7 +218,8 @@ nav a:hover {
     background-color: darkgrey;
     color: #ecf0f1;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
+    margin-top: 25px;
     border-radius: 10px;
     width: 100%;
     height: auto;
