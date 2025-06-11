@@ -218,10 +218,10 @@ nav a:hover {
     color: #ecf0f1;
     position: relative;
     margin-bottom: 75px;
-    border-radius: 30px;
-    width: 100%;
+    border-radius: 10px;
+    width: 75%;
     padding-left: 35px;
-    height: 45px;
+    height: 20%;
 }
 
 
