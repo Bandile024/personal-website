@@ -240,6 +240,29 @@ nav a:hover {
     width: 100%;
 }
 
+.footer-2 .social-links {
+    margin-top: 10px;
+}
+
+.footer-2 .social-links a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.footer-2 .social-links a:hover {
+    color: #fff;
+}
+
+@media (max-width: 480px) {
+    .footer-2 .social-links a {
+        font-size: 1.2em;
+        margin: 0 5px;
+    }
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
     .container {
