@@ -224,6 +224,9 @@ nav a:hover {
     padding-left: 35px;
  }
 
+.footer-1 .left-side {
+    margin-left: 15px; /* Adjust value to move right */
+}
 
 .footer-2 {
     text-align: center;
