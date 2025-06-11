@@ -219,7 +219,6 @@ nav a:hover {
     position: relative;
     margin-bottom: 75px;
     border-radius: 30px;
-    box-sizing: border-box;
     width: 100%;
 }
 
