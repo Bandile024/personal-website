@@ -71,6 +71,7 @@ nav a:hover {
     padding: 2rem;
     border-radius: 8px;
     height: auto;
+  position: relative;
 }
 
 .home-hero h2 {
